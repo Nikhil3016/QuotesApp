@@ -1,5 +1,6 @@
 package com.nk.quotes.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -22,10 +23,17 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.nk.quotes.DataManager
 import com.nk.quotes.model.Quote
+import com.nk.quotes.model.response.Result
 
 @Composable
-private fun QuoteDetail(quote: Quote, onClick: () -> Unit) {
+fun QuoteDetail(quote: Result) {
+
+    BackHandler {
+        DataManager.switchPages(null)
+    }
+
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier

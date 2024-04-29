@@ -69,4 +69,12 @@ dependencies {
 
     implementation("androidx.compose.material:material-icons-extended:1.6.6")
     implementation("com.google.code.gson:gson:2.10.1")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+
+    // GSON
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.6")
 }
